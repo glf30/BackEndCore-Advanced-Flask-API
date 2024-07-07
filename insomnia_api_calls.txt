@@ -1,0 +1,135 @@
+Get Requests
+
+curl --request GET \
+  --url http://127.0.0.1:5000/customers \
+  --header 'User-Agent: insomnia/9.3.1'
+
+curl --request GET \
+  --url http://127.0.0.1:5000/customeraccounts \
+  --header 'User-Agent: insomnia/9.3.1'
+
+curl --request GET \
+  --url http://127.0.0.1:5000/orders \
+  --header 'User-Agent: insomnia/9.3.1'
+
+curl --request GET \
+  --url http://127.0.0.1:5000/products \
+  --header 'User-Agent: insomnia/9.3.1'
+
+  
+ 
+Post(Create) Requests
+
+curl --request POST \
+  --url http://127.0.0.1:5000/customers \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	"name": "Skylar Ennenga",
+	"email": "S_Enne@gmail.com",
+	"phone": "719-364-2387"
+	
+}'
+
+curl --request POST \
+  --url http://127.0.0.1:5000/customeraccount \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	"username": "sky_enn",
+	"password": "password1",
+	"customer_id": 1
+	
+}'
+
+curl --request POST \
+  --url http://127.0.0.1:5000/orders \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	"date": "2024-07-07",
+	"customer_id": 1
+
+	
+}'
+
+curl --request POST \
+  --url http://127.0.0.1:5000/products \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	"name": "Smiley o'\''s",
+	"price": 2.99
+
+	
+}'
+
+PUT(Update) Requests
+
+curl --request PUT \
+  --url 'http://127.0.0.1:5000/customers/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{"name": "Skylar ennenga",
+	"email": "testss@gmail.com",
+	"phone": "719-208-7125"
+	
+}'
+
+curl --request PUT \
+  --url 'http://127.0.0.1:5000/customeraccount/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	"username": "sky_enn",
+	"password": "password2",
+	"customer_id": 1
+	
+}'
+
+curl --request PUT \
+  --url 'http://127.0.0.1:5000/orders/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	
+	
+	"date": "2024-07-07",
+	"customer_id": 1
+
+	
+}'
+
+curl --request PUT \
+  --url 'http://127.0.0.1:5000/products/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1' \
+  --data '{
+	"name": "Smiley o'\''s",
+	"price": 2.99
+
+	
+}'
+
+Delete Requests
+
+curl --request DELETE \
+  --url 'http://127.0.0.1:5000/customers/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1'
+
+
+curl --request DELETE \
+  --url 'http://127.0.0.1:5000/customeraccount/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1'
+
+curl --request DELETE \
+  --url 'http://127.0.0.1:5000/orders/5?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1'
+
+curl --request DELETE \
+  --url 'http://127.0.0.1:5000/products/1?=' \
+  --header 'Content-Type: application/json' \
+  --header 'User-Agent: insomnia/9.3.1'
