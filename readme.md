@@ -1,3 +1,15 @@
+## Recent Changes and Improvements
+
+This is an improvement from my original API. You can view the original project on GitHub: [BackendCore_E_Commerce_API](https://github.com/Skylar-Ennenga/BackendCore_E_Commerce_API.git).
+
+### Checklist of Changes:
+
+- [x] **Cascade Delete for Customers:** Added `cascade="all, delete-orphan"` to relationships in the `Customer` model for `customer_account` and `orders`.
+- [x] **Manual Deletion of `order_product` Associations:** Implemented manual deletion of associated records in the `order_product` table before deleting an `Order` or `Customer`.
+- [x] **Enhanced `delete_customer` Route:** Updated to remove related `order_product` entries for each order before deleting the customer.
+- [x] **Enhanced `delete_order` Route:** Updated to remove associated records from the `order_product` table before deleting the order itself.
+- [x] **Error Handling Improvements:** Added additional error handling for safer deletion operations and to prevent `IntegrityError`.
+
 # E-Commerce API with Flask and SQLAlchemy
 
 This repository contains a RESTful API built with Flask and SQLAlchemy for managing customers, accounts, products, and orders in an e-commerce application.
