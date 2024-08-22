@@ -8,10 +8,12 @@ import datetime
 from typing import List
 from marshmallow import ValidationError, fields, validates, validate
 import re
+import os
 
 app = Flask(__name__)
 CORS(app)
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:Sennenga28!@localhost/project_e_commerce_db"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv('DATABASE_URL')
+# app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+mysqlconnector://root:Sennenga28!@localhost/project_e_commerce_db"
 
 class Base(DeclarativeBase):
     pass
